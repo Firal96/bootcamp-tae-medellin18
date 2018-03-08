@@ -1,11 +1,15 @@
 package com.globant.bootcamp.twitter.driver;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.concurrent.TimeUnit;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 /**
  * This is NOT the final solution.
@@ -18,13 +22,16 @@ public class Drivers {
         if (driver == null) {
             ChromeDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            driver = new ChromeDriver();
             options.addArguments("disable-infobars");
-            driver.manage().window().maximize();
+            driver = new ChromeDriver(options);           
+            driver.manage().window().fullscreen();
             driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
             driver.get("https://twitter.com/");
+            
+            WebElement we = driver.findElement(By.tagName("html"));
+            we.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
         }
         return driver;
     }

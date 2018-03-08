@@ -9,6 +9,9 @@ public class HomePage {
 
     @FindBy(id = "global-new-tweet-button")
     private WebElement newTweetButton;
+    
+    @FindBy(id = "tweet-box-home-timeline")
+    private WebElement tweetBox;
 
     public HomePage() {
         PageFactory.initElements(Drivers.getDriver(), this);
@@ -16,5 +19,9 @@ public class HomePage {
 
     public boolean hasTweetButton() {
         return newTweetButton.isDisplayed() && newTweetButton.isEnabled();
+    }
+    
+    public void post(){
+    	tweetBox.sendKeys("Un Tweet automatizado");
     }
 }

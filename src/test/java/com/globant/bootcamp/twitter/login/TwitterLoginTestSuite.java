@@ -12,6 +12,8 @@ import static org.testng.Assert.assertTrue;
  * TwitterLoginTestSuite represents a suite of tests to verify the Login functionality.
  */
 public class TwitterLoginTestSuite {
+	
+	HomePage homePage;
 
     /**
      * Tear down method.
@@ -19,13 +21,20 @@ public class TwitterLoginTestSuite {
      */
     @AfterMethod
     public void tearDown() {
-        quit();
+       // quit();
     }
 
     @Test
     public void testSuccessfulLogin() {
-        HomePage homePage = new LoginPage().login("damianmoga@gmail.com", "1q2w3e4r");
+        homePage = new LoginPage().login("danielgiraldo9612@gmail.com", "careculo96");
         assertTrue(homePage.hasTweetButton(), ":)");
     }
+    
+    @Test
+    public void testSuccessfulPosting(){
+    	homePage.post();
+    }
+    
+
 
 }

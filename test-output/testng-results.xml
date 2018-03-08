@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14044" started-at="2018-03-08T11:09:52Z" finished-at="2018-03-08T11:10:06Z">
+  <suite name="Default suite" duration-ms="29326" started-at="2018-03-08T23:08:54Z" finished-at="2018-03-08T23:09:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14044" started-at="2018-03-08T11:09:52Z" finished-at="2018-03-08T11:10:06Z">
+    <test name="Default test" duration-ms="29326" started-at="2018-03-08T23:08:54Z" finished-at="2018-03-08T23:09:24Z">
       <class name="com.globant.bootcamp.twitter.login.TwitterLoginTestSuite">
-        <test-method status="PASS" signature="testSuccessfulLogin()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="testSuccessfulLogin" duration-ms="11817" started-at="2018-03-08T06:09:52Z" finished-at="2018-03-08T06:10:04Z">
+        <test-method status="PASS" signature="testSuccessfulLogin()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="testSuccessfulLogin" duration-ms="24662" started-at="2018-03-08T18:08:54Z" finished-at="2018-03-08T18:09:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-03-08T06:10:04Z" finished-at="2018-03-08T06:10:04Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-03-08T18:09:19Z" finished-at="2018-03-08T18:09:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="testSuccessfulPosting()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="testSuccessfulPosting" duration-ms="2203" started-at="2018-03-08T06:10:04Z" finished-at="2018-03-08T06:10:06Z">
+        <test-method status="PASS" signature="testSuccessfulPosting()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="testSuccessfulPosting" duration-ms="4635" started-at="2018-03-08T18:09:19Z" finished-at="2018-03-08T18:09:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSuccessfulPosting -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-03-08T06:10:06Z" finished-at="2018-03-08T06:10:06Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.globant.bootcamp.twitter.login.TwitterLoginTestSuite@cc285f4]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-03-08T18:09:24Z" finished-at="2018-03-08T18:09:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

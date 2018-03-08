@@ -32,7 +32,9 @@ public class TwitterLoginTestSuite {
     
     @Test
     public void testSuccessfulPosting(){
-    	homePage.post();
+    	homePage.post("tweet automático");
+    	assertTrue(homePage.hasNewPost());
+    	quit();
     }
     
 

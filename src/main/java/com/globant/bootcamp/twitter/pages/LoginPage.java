@@ -1,11 +1,14 @@
 package com.globant.bootcamp.twitter.pages;
 
-import com.globant.bootcamp.twitter.driver.Drivers;
+import java.util.List;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+
+import com.globant.bootcamp.twitter.driver.Drivers;
 
 public class LoginPage {
 
@@ -23,6 +26,7 @@ public class LoginPage {
     }
 
     public HomePage login(String username, String password) {
+    	
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginButton.get(0).click();

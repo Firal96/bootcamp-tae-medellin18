@@ -1,12 +1,12 @@
 package com.glb.bootcamp.pageobject;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
 import static com.glb.bootcamp.driver.Drivers.getDriver;
 import static com.glb.bootcamp.waits.Waits.isClickable;
 import static com.glb.bootcamp.waits.Waits.isVisible;
-import static org.openqa.selenium.support.PageFactory.initElements;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * PageObjectBase.
@@ -17,7 +17,7 @@ public class PageObjectBase {
      * Default constructor for creating an instance of a PO class, using PageFactory.
      */
     public PageObjectBase() {
-        initElements(getDriver().getWebDriver(), this);
+        PageFactory.initElements(getDriver().getWebDriver(), this);
     }
 
     /**

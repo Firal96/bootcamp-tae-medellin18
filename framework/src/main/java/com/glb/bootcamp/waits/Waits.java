@@ -1,12 +1,13 @@
 package com.glb.bootcamp.waits;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static com.glb.bootcamp.driver.Drivers.getDriver;
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Waits supports the explicit waiting operation, using {@link WebDriverWait} and {@link ExpectedConditions}.
@@ -20,7 +21,8 @@ public final class Waits {
      * @return the {@link WebElement}
      */
     public static WebElement isClickable(WebElement webElement) {
-        return waiting().until(elementToBeClickable(webElement));
+//        return waiting().until(elementToBeClickable(webElement));
+    	return waiting().until(elementToBeClickable(webElement));
     }
 
     /**
@@ -36,5 +38,11 @@ public final class Waits {
     private static WebDriverWait waiting() {
         return getDriver().getWebDriverWait();
     }
-
+    
+//    private static FluentWait waitingFluent(){
+//    	return getDriver().getFluentWait();
+//    }
+//    private static WebElement waitingl(WebElement webElement) {
+//    	return getDriver().getFluentWait().until(elementToBeClickable(webElement));
+//    }
 }

@@ -1,14 +1,15 @@
 package com.glb.bootcamp.driver;
 
-import com.glb.bootcamp.browser.Browsers;
+import static java.util.concurrent.TimeUnit.SECONDS;
+
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
+import com.glb.bootcamp.browser.Browsers;
 
 /**
  * Driver container of {@link WebDriver} instance and the {@link Browsers} information.
@@ -20,6 +21,8 @@ public final class Driver {
     private WebDriver webDriver;
 
     private WebDriverWait webDriverWait;
+    
+    private FluentWait fluentWait;	
 
     /**
      * Default constructor.
@@ -34,6 +37,12 @@ public final class Driver {
         webDriverWait.pollingEvery(1, SECONDS)
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(NotFoundException.class);
+        this.fluentWait = new FluentWait(webDriver)
+        		.withTimeout(30, SECONDS)        		 
+        	    .pollingEvery(1, SECONDS)        	 
+        	    .ignoring(NoSuchElementException.class);
+        this.webDriverWait = new WebDriverWait(webDriver, 30);
+        	 
     }
 
     public Browsers getBrowserName() {
@@ -46,6 +55,10 @@ public final class Driver {
 
     public WebDriverWait getWebDriverWait() {
         return webDriverWait;
+    }
+    
+    public FluentWait getFluentWait(){
+    	return fluentWait;
     }
 
 }

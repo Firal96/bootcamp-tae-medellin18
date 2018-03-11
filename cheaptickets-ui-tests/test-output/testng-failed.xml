@@ -6,17 +6,4 @@
       <class name="com.glb.bootcamp.test.hotelTestSuite"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.glb.bootcamp.test.hotelTestSuite">
-        <methods>
-          <include name="testSetUp"/>
-          <include name="searchHotel"/>
-          <include name="suiteSetUp"/>
-          <include name="suiteTearDown"/>
-          <include name="testTearDown"/>
-        </methods>
-      </class> <!-- com.glb.bootcamp.test.hotelTestSuite -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

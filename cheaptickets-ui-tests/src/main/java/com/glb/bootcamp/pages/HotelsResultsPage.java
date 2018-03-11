@@ -24,7 +24,7 @@ public class HotelsResultsPage extends PageObjectBase {
 	
 	
 	/**
-	 * Checks that info displayed in the page are correct
+	 * Checks that info displayed in the page is correct
 	 * @param cityExpected
 	 * @return
 	 */
@@ -49,13 +49,15 @@ public class HotelsResultsPage extends PageObjectBase {
 	 * Search for a specific hotel
 	 * @param desiredHotel = The hotel you want to lookup
 	 * @return
+	 * @throws InterruptedException 
 	 */
 
-	public HotelsResultsPage searchHotel(String desiredHotel) {
+	public HotelsResultsPage searchHotel(String desiredHotel) throws InterruptedException {
 		searchBar.sendKeys(desiredHotel);
 		suggestionsDropdown dropdown = new suggestionsDropdown();
 		dropdown.selectSuggestion();
 		goButton.click();
+		Thread.sleep(500);
 		return new HotelsResultsPage();
 	}
 	

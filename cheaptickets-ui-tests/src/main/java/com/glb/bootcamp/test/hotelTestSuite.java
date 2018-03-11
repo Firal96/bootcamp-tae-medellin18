@@ -13,7 +13,7 @@ import com.glb.bootcamp.testsuite.BaseTestSuite;
 public class hotelTestSuite extends BaseTestSuite{
 	
 	@Test
-	public void searchHotel(){
+	public void searchHotel() throws InterruptedException{
 		SoftAssert softAssert = new SoftAssert();
 		HotelsSearchPage hotelsPage = new LandingPage().goToHotelsPage("https://www.cheaptickets.com");
 		HotelsResultsPage hotelsResult = hotelsPage.searchHotel("Medellin", "2","2");		

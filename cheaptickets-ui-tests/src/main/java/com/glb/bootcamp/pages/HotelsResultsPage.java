@@ -19,6 +19,9 @@ public class HotelsResultsPage extends PageObjectBase {
 	@FindBy(id = "inpHotelNameMirror")
 	WebElement searchBar;
 	
+	@FindBy(className = "hotelNameFilterBtn")
+	WebElement goButton;
+	
 	
 	/**
 	 * Checks that info displayed in the page are correct
@@ -52,6 +55,13 @@ public class HotelsResultsPage extends PageObjectBase {
 		searchBar.sendKeys(desiredHotel);
 		suggestionsDropdown dropdown = new suggestionsDropdown();
 		dropdown.selectSuggestion();
+		goButton.click();
 		return new HotelsResultsPage();
+	}
+	
+	public boolean hotelDisplayed(String hotelName){
+		String resultLink = results.get(0).getAttribute("href");
+		boolean ok = resultLink.contains(hotelName);
+		return ok;
 	}
 }

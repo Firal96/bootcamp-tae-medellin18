@@ -17,8 +17,9 @@ public class hotelTestSuite extends BaseTestSuite{
 		SoftAssert softAssert = new SoftAssert();
 		HotelsSearchPage hotelsPage = new LandingPage().goToHotelsPage("https://www.cheaptickets.com");
 		HotelsResultsPage hotelsResult = hotelsPage.searchHotel("Medellin", "2","2");		
-		softAssert.assertTrue(hotelsResult.resultsDisplayed("Medellin"), ":)");
-		HotelsResultsPage hotelsSearch = hotelsResult.searchHotel("sky");
+		softAssert.assertTrue(hotelsResult.resultsDisplayed("Medellin"));
+		HotelsResultsPage hotelsSearch = hotelsResult.searchHotel("Sky");	
+		softAssert.assertTrue(hotelsSearch.hotelDisplayed("Sky"));
 		softAssert.assertAll();
 	}
 

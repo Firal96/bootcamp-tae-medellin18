@@ -35,14 +35,9 @@ public final class Waits {
         return waiting().until(visibilityOf(webElement));
     }
 
+
     private static WebDriverWait waiting() {
         return getDriver().getWebDriverWait();
     }
-    
-//    private static FluentWait waitingFluent(){
-//    	return getDriver().getFluentWait();
-//    }
-//    private static WebElement waitingl(WebElement webElement) {
-//    	return getDriver().getFluentWait().until(elementToBeClickable(webElement));
-//    }
+
 }

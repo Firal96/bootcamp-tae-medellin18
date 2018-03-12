@@ -1,10 +1,12 @@
 package com.glb.bootcamp.pages;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.glb.bootcamp.driver.Driver;
 import com.glb.bootcamp.pageobject.PageObjectBase;
 import com.glb.bootcamp.waits.Waits;
 
@@ -66,4 +68,13 @@ public class HotelsResultsPage extends PageObjectBase {
 		boolean ok = resultLink.contains(hotelName);
 		return ok;
 	}
+
+	public PaymentPage pickHotel() {
+		results.get(0).click();
+		Driver.switchTab();		
+		ReservationPage reservationPage = new ReservationPage();
+		return reservationPage.bookRoom();		
+		
+	}
+
 }

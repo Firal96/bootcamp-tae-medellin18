@@ -3,7 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.glb.bootcamp.test.hotelTestSuite"/>
+      <class name="com.glb.bootcamp.test.hotelTestSuite">
+        <methods>
+          <include name="searchHotel"/>
+        </methods>
+      </class> <!-- com.glb.bootcamp.test.hotelTestSuite -->
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Failed suite [Default suite] -->

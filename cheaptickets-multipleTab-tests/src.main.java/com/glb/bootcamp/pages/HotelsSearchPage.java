@@ -67,8 +67,6 @@ public class HotelsSearchPage extends PageObjectBase{
 		hotelInput.sendKeys(city);		
 		selectByText(this.adults, adults);
 		selectByText(this.children, children);
-		ChildrenAgePicker childrenAgePicker = new ChildrenAgePicker();
-		childrenAgePicker.pickKidsAge();
 		searchButton.click();
 		return new HotelsResultsPage();
 	}

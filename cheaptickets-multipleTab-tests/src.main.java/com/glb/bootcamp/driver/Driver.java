@@ -2,6 +2,8 @@ package com.glb.bootcamp.driver;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
+import java.util.Set;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -18,7 +20,7 @@ public final class Driver {
 
     private Browsers browsers;
 
-    private WebDriver webDriver;
+    private static WebDriver webDriver;
 
     private WebDriverWait webDriverWait;
     
@@ -49,7 +51,7 @@ public final class Driver {
         return browsers;
     }
 
-    public WebDriver getWebDriver() {
+    public static WebDriver getWebDriver() {
         return webDriver;
     }
 
@@ -59,6 +61,24 @@ public final class Driver {
     
     public FluentWait getFluentWait(){
     	return fluentWait;
+    }
+    
+    public static void switchTab() {
+		String parent = currentWindow();
+		Set<String> allWindows = windowsSet();
+		for(String child: allWindows){
+			if(!parent.equals(child)){
+				Driver.getWebDriver().switchTo().window(child);
+			}
+		}
+	}
+    
+    public static Set<String> windowsSet(){
+    	return webDriver.getWindowHandles();
+    }
+    
+    public static String currentWindow(){
+    	return webDriver.getWindowHandle();
     }
 
 }

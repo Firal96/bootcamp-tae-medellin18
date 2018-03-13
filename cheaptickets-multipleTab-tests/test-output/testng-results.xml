@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41988" started-at="2018-03-12T02:55:26Z" finished-at="2018-03-12T02:56:08Z">
+  <suite name="Default suite" duration-ms="45293" started-at="2018-03-13T02:52:17Z" finished-at="2018-03-13T02:53:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41988" started-at="2018-03-12T02:55:26Z" finished-at="2018-03-12T02:56:08Z">
-      <class name="com.glb.bootcamp.test.hotelTestSuite">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.glb.bootcamp.test.hotelTestSuite@57fffcd7]" name="suiteSetUp" is-config="true" duration-ms="681" started-at="2018-03-11T21:55:26Z" finished-at="2018-03-11T21:55:27Z">
+    <test name="Default test" duration-ms="45293" started-at="2018-03-13T02:52:17Z" finished-at="2018-03-13T02:53:02Z">
+      <class name="com.glb.bootcamp.test.HotelTestSuite">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.glb.bootcamp.test.HotelTestSuite@57fffcd7]" name="suiteSetUp" is-config="true" duration-ms="664" started-at="2018-03-12T21:52:17Z" finished-at="2018-03-12T21:52:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.glb.bootcamp.test.hotelTestSuite@57fffcd7]" name="testSetUp" is-config="true" duration-ms="7456" started-at="2018-03-11T21:55:27Z" finished-at="2018-03-11T21:55:34Z">
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.glb.bootcamp.test.HotelTestSuite@57fffcd7]" name="testSetUp" is-config="true" duration-ms="10083" started-at="2018-03-12T21:52:18Z" finished-at="2018-03-12T21:52:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetUp -->
-        <test-method status="PASS" signature="searchHotel()[pri:0, instance:com.glb.bootcamp.test.hotelTestSuite@57fffcd7]" name="searchHotel" duration-ms="32810" started-at="2018-03-11T21:55:34Z" finished-at="2018-03-11T21:56:07Z">
+        <test-method status="PASS" signature="searchHotel()[pri:0, instance:com.glb.bootcamp.test.HotelTestSuite@57fffcd7]" name="searchHotel" duration-ms="33730" started-at="2018-03-12T21:52:28Z" finished-at="2018-03-12T21:53:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchHotel -->
-        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.glb.bootcamp.test.hotelTestSuite@57fffcd7]" name="testTearDown" is-config="true" duration-ms="268" started-at="2018-03-11T21:56:07Z" finished-at="2018-03-11T21:56:07Z">
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.glb.bootcamp.test.HotelTestSuite@57fffcd7]" name="testTearDown" is-config="true" duration-ms="147" started-at="2018-03-12T21:53:01Z" finished-at="2018-03-12T21:53:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTearDown -->
-        <test-method status="PASS" signature="suiteTearDown()[pri:0, instance:com.glb.bootcamp.test.hotelTestSuite@57fffcd7]" name="suiteTearDown" is-config="true" duration-ms="752" started-at="2018-03-11T21:56:07Z" finished-at="2018-03-11T21:56:08Z">
+        <test-method status="PASS" signature="suiteTearDown()[pri:0, instance:com.glb.bootcamp.test.HotelTestSuite@57fffcd7]" name="suiteTearDown" is-config="true" duration-ms="660" started-at="2018-03-12T21:53:02Z" finished-at="2018-03-12T21:53:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTearDown -->
-      </class> <!-- com.glb.bootcamp.test.hotelTestSuite -->
+      </class> <!-- com.glb.bootcamp.test.HotelTestSuite -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

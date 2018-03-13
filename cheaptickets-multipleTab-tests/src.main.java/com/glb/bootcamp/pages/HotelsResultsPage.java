@@ -25,17 +25,19 @@ public class HotelsResultsPage extends PageObjectBase {
 	WebElement goButton;
 	
 	
-	/**
-	 * Checks that info displayed in the page is correct
-	 * @param cityExpected
-	 * @return
-	 */
 	
 	public HotelsResultsPage() {
 		super();
 		Waits.isVisible(title);
 		Waits.isVisible(searchBar);
 	}
+	
+	/**
+	 * Checks that info displayed in the page is correct
+	 * @param cityExpected
+	 * @return
+	 */
+	
 	
 	public boolean resultsDisplayed(String cityExpected){
 		if(title.isDisplayed()){
@@ -56,7 +58,7 @@ public class HotelsResultsPage extends PageObjectBase {
 
 	public HotelsResultsPage searchHotel(String desiredHotel) throws InterruptedException {
 		searchBar.sendKeys(desiredHotel);
-		suggestionsDropdown dropdown = new suggestionsDropdown();
+		SuggestionsDropdown dropdown = new SuggestionsDropdown();
 		dropdown.selectSuggestion();
 		goButton.click();
 		Thread.sleep(1000);

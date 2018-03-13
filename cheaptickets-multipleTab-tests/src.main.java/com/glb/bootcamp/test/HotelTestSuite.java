@@ -1,7 +1,5 @@
 package com.glb.bootcamp.test;
 
-import static org.testng.Assert.assertTrue;
-
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -12,7 +10,7 @@ import com.glb.bootcamp.pages.LandingPage;
 import com.glb.bootcamp.pages.PaymentPage;
 import com.glb.bootcamp.testsuite.BaseTestSuite;
 
-public class hotelTestSuite extends BaseTestSuite{
+public class HotelTestSuite extends BaseTestSuite{
 	
 	@Test
 	public void searchHotel(){
@@ -21,7 +19,12 @@ public class hotelTestSuite extends BaseTestSuite{
 		HotelsResultsPage hotelsResult = hotelsPage.searchHotel("Medellin", "1","0");
 		PaymentPage paymentPage = hotelsResult.pickHotel();
 		softAssert.assertTrue(Driver.windowsSet().size() > 1);
-		softAssert.assertTrue(paymentPage.checkPaymentFields());
+		softAssert.assertTrue(paymentPage.cardHolderNameVisible());
+		softAssert.assertTrue(paymentPage.cardMonthVisible());
+		softAssert.assertTrue(paymentPage.cardNumberVisible());
+		softAssert.assertTrue(paymentPage.cardSecurityCodeVisible());
+		softAssert.assertTrue(paymentPage.cardYearVisible());
+		softAssert.assertTrue(paymentPage.cardZipVisible());
 		softAssert.assertAll();
 	}
 }

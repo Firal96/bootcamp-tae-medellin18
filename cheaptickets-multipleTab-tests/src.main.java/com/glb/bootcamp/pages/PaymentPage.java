@@ -21,7 +21,7 @@ public class PaymentPage extends PageObjectBase{
 	WebElement cardYear;
 	
 	@FindBy(id = "new_cc_security_code")
-	WebElement cardsecurityCode;
+	WebElement cardSecurityCode;
 	
 	@FindBy(className = "pwp-insurance-zipcode")
 	WebElement cardZip;
@@ -33,15 +33,33 @@ public class PaymentPage extends PageObjectBase{
 		Waits.isVisible(cardNumber);
 		Waits.isVisible(cardHolderName);
 		Waits.isVisible(cardMonth);		
-		Waits.isVisible(cardsecurityCode);
+		Waits.isVisible(cardSecurityCode);
 		Waits.isVisible(cardYear);
 		Waits.isVisible(cardZip);
 	}
-
-	public boolean checkPaymentFields() {
-		return cardHolderName.isDisplayed() && cardMonth.isDisplayed() && cardNumber.isDisplayed() 
-				&& cardsecurityCode.isDisplayed() && cardYear.isDisplayed() && cardZip.isDisplayed();
+	
+	public boolean cardNumberVisible(){
+		return cardNumber.isDisplayed();
 	}
 	
+	public boolean cardHolderNameVisible(){
+		return cardHolderName.isDisplayed();
+	}
+	
+	public boolean cardMonthVisible(){
+		return cardMonth.isDisplayed();
+	}
+	
+	public boolean cardSecurityCodeVisible(){
+		return cardSecurityCode.isDisplayed();
+	}
+	
+	public boolean cardYearVisible(){
+		return cardYear.isDisplayed();
+	}
+	
+	public boolean cardZipVisible(){
+		return cardZip.isDisplayed();
+	}
 
 }
